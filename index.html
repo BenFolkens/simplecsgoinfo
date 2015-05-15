@@ -12,7 +12,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -34,14 +34,17 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
 <script>
-$.getJSON("https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v2/?appid=730&key=AA6140CB2C110DFBD374C71B7256FF53&steamid=76561198077248155", function(person){
+  $.getJSON("https://graph.facebook.com/btaylor", function(person){
+
     $.each(person, function(key, value){
         document.write(key+": "+value+"<br />"); 
     });
 });
 
 </script>
+
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
