@@ -36,12 +36,16 @@
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
 <script>
-$(document).ready(function(){
-  $.getJSON("https://graph.facebook.com/btaylor", function(person){
-    $.each(person, function(key, value){
-        document.write(key+": "+value+"<br />"); 
-    });
+$.getJSON( "https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v2/?appid=730&key=AA6140CB2C110DFBD374C71B7256FF53&steamid=76561198077248155", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
   });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
 });
 
 </script>
