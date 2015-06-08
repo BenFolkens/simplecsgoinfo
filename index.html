@@ -35,20 +35,16 @@
 
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<script>
-$.getJSON( "https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v2/?appid=730&key=AA6140CB2C110DFBD374C71B7256FF53&steamid=76561198077248155", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
-  });
- 
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
-});
-
+<script type="text/javascript">
+  ( function() {
+    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+    var unit = {"calltype":"async[2]","publisher":"benfolkens","width":550,"height":250,"sid":"Chitika Default"};
+    var placement_id = window.CHITIKA.units.length;
+    window.CHITIKA.units.push(unit);
+    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+}());
 </script>
+<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
 
 <p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
@@ -68,6 +64,8 @@ $.getJSON( "https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v2/
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
+
 
   </body>
 </html>
